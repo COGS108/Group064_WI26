@@ -1,0 +1,1115 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Rubric\n",
+    "\n",
+    "Instructions: DELETE this cell before you submit via a `git push` to your repo before deadline. This cell is for your reference only and is not needed in your report. \n",
+    "\n",
+    "Scoring: Out of 18 points in total.  15 points in the report.  3 points in the video summary of your report for a non-technical audience.\n",
+    "\n",
+    "For the report:\n",
+    "- Each Developing  => -0.5 pts\n",
+    "- Each Unsatisfactory/Missing => -1 pts\n",
+    "  - until the score is 0\n",
+    "\n",
+    "For the video:\n",
+    "- Developing  => -1.5 pts\n",
+    "- Unsatisfactory/Missing => -3 pts\n",
+    "\n",
+    "|                                                                                    | Unsatisfactory                                                                                                                                                                                                                                                                                      | Developing                                                                                                                                                                                                                                                                                                                          | Proficient                                                                                                                                                                                                                                                    | Exellent                                                                                                                                                                                                                                                                                                                                                          |\n",
+    "| ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n",
+    "| Title & abstract                                                                   | Title or abstract is confusing or fails to offer important details about the question, variables, context, or methods of the project.                                                                                                                                                               | Title or abstract lacks relevance or fails to offer appropriate details about the question, variables, context, or methods of the project.                                                                                                                                                                                          | Title and abstract are relevant, offering sufficient details about the research project.                                                                                                                                                                      | Title and abstract are informative, succinct, and clear. It offers specific details about the question, variables, context, and proposed methods of the study.                                                                                                                                                                                                    |\n",
+    "| Background                                                                         | Did not have at least 3 reliable and relevant sources. Or relevant sources were not used in relevant ways                                                                                                                                                                                           | A key component was not connected to the research literature. Selected literature was from unreliable sources. Literary supports were vague or ambiguous.                                                                                                                                                                           | Key research components were connected to relevant, reliable literature.                                                                                                                                                                                      | Narrative integrates critical and logical details from the peer-reviewed or other professional research literature. Each key research component is grounded to the literature. Attention is given to different perspectives, threats to validity, and opinion vs. evidence.                                                                                       |\n",
+    "| Research question & hypothesis                                                     | Research issue remains unclear. The research purpose, questions, hypotheses, definitions or variables and controls are still largely undefined, or when they are are poorly formed, ambiguous, or not logically connected to the description of the problem. Unclear connections to the literature. | Research issue is identified, but statement is too broad or fails to establish the importance of the problem. The research purpose, questions, hypotheses, definitions or variables and controls are poorly formed, ambiguous, or not logically connected to the description of the problem. Unclear connections to the literature. | Identifies a relevant research issue. Research questions are succinctly stated, connected to the research issue, and supported by the literature. Variables and controls have been identified and described. Connections are established with the literature. | Presents a significant research problem related to the chemical sciences. Articulates clear, reasonable research questions given the purpose, design, and methods of the project. All variables and controls have been appropriately defined. Proposals are clearly supported from the research and theoretical literature. All elements are mutually supportive. |\n",
+    "| Data description                                                                   | Did not have references to relevant data sources for this problem. Did not describe the data obtained at those sources                                                                                                                                                                              | A key data source was not referenced or described in satisfactory level of detail                                                                                                                                                                                                                                                   | All relevant data sources were referenced and described in terms of their key variables and size                                                                                                                                                              | Multiple data sources for each aspect of the project, All data sources are fully described and referenced. The details of the descriptions also make it clear how they support the needs ot the project.                                                                                                                                                          |\n",
+    "| Data wrangling                                                                     | Data obviously not tidy and not clean. Or even if they are clean/tidy, there was no demonstration of that fact                                                                                                                                                                                      | Data has some minor problems with tidiness or cleanliness. Potentially these are not problems but it wasn't fully demonstrated to be the case in the code                                                                                                                                                                           | Data are made tidy and clean, or are clearly demonstrated to be so from download                                                                                                                                                                              | Data wrangling is complete, but also particularly thoroughly done for a very tough case. Often free text parsing is a bear like this, and doing it well can mean a million edge cases.                                                                                                                                                                            |\n",
+    "| Data visualizations                                                                | Many plots don't capture useful information, or their display of information is difficult to understand.. Legends, labels, axes, titles, captions, etc of many plots may be poor or missing. Figures are not referenced in the main text.                                                           | Most plots make sense and capture useful information. Legends, labels, axes, titles, captions, etc are mostly legible and adequately describe the content of the figure. Most figures are referenced or explained inside the main text and not just left hanging.                                                                   | Plots make sense and capture useful information. Legends, labels, axes, titles, captions, etc are clearly legible and adequately describe the content of the figure. Figures are referenced or explained inside the main text and not just left hanging.      | Plots are beautiful and information dense. Legends, labels, axes, titles, captions, etc clearly describe the content of the figure. Figures are well integrated with the text.                                                                                                                                                                                    |\n",
+    "| Data analysis and results                                                          | Lacks any metrics or at least metrics that are relevant to the problem                                                                                                                                                                                                                              | Some metrics selected are not appropriate for the problem or the metrics selected are not described sufficiently                                                                                                                                                                                                                    | All metrics described are appropriate and and described sufficiently                                                                                                                                                                                          | The metrics are described clearly and succinctly. Their appropriateness for addressing the research problem is clearly described.                                                                                                                                                                                                                                 |\n",
+    "| Ethics                                                                             | Only tries a baseline model, never advances to proper model/hyper-parameter selection                                                                                                                                                                                                               | Only investigates one minimal aspect of their problem, e.g. just did a single hyperparameter selection on a single model                                                                                                                                                                                                            | Does a good model/hyper-parameter selection. Only attempts minimal secondary analysis                                                                                                                                                                         | Does a good model/hyper-parameter selection. Performs multiple secondary analysis such as learning curves, heat maps looking at where in the parameter space things are good/bad, uses statistical testing                                                                                                                                                        |\n",
+    "| Conclusion and discussion                                                          | Doesn't have a narrative/conclusions of what the report accomplished. Or very minimal conclusions, like \"X was best\" without anything else                                                                                                                                                          | Has narrative/conclusions, but it feels perfunctory and lacks context. Especially if the limitations and ethics sections are largely junk or missing                                                                                                                                                                                | Properly recapitulates the results and provides context for them. Has a sense of the limitatins and ethical issues.                                                                                                                                           | Clearly recapitulates the results and provides context, including the literature/background Has a sense of what to do next, and has good explorations of the limitations and ethics.                                                                                                                                                                              |\n",
+    "| Documentation and written communication                                            | Code documentation is non-existent or perfunctory. Writing has usage errors, poor fluency, and poor rhetoric. If doc/writing are both like this you get unsatisfacory. If one is unsatisfactory and the other is developing you still get unsatisfactory overall.                                   | Code documentation is only partially there. Writing has some usage errors, some poor fluency, or some poor rhetoric. If doc/writing are both like this you get developing. If one is developing and the other is satisfactory you still get developing.                                                                             | Code is documented throughout. Writing has good fluency, good rhetoric, and at most a few minor errors.                                                                                                                                                       | Code documentation is highly informative with docstrings. Writing is high quality. If both doc/writing are like this you get excellent. If one is satisfactory and the other excellent you still get satisfactory.                                                                                                                                                |\n",
+    "| Video (developing -1.5 points, unsatisfactory -3 points)                           | Video well outside the 3-5min time range. Does not communicate major results at a non-technical level. Has major technical issues such as no sound or not available at link. Unsatisfactory if 2/3 of these are true                                                                                | Video just outside the 3-5min time range. Does not communicate well on some points (either wrong tech level or just confusing). Has technical issues such as poor speech quality on video. Developing if 2/3 of these are true                                                                                                      | Video has good quality and is in within 3-5 min range. Communicates the major results at an accessible level for non-technical people.                                                                                                                        | Video has high production quality and is in within 3-5 min range. Communicates the major results clearly and gives a sense of the methods at an accessible level for non-technical people. Has a wow factor (e.g. funny or original approach)                                                                                                                     |\n",
+    "| Quality modifier (can result in extra credit beyond 18 points for this assignment) | Almost everything was just barely proficient. Lots of minimal effort work. Do not double punish; if they already lost points on the rubric do not invoke this: -0.5 points                                                                                                                        |                                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                      |                                                                                                                                                                                                                                                                                                                       More than 5 excellents on this rubric: +0.5 points                                                                                   |"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# COGS 108 - Final Project (change this to your project's title)\n",
+    "\n",
+    "## Permissions\n",
+    "\n",
+    "Place an `X` in the appropriate bracket below to specify if you would like your group's project to be made available to the public, including the names of the authors.\n",
+    "\n",
+    "* [  ] YES - make available\n",
+    "* [  ] NO - keep private\n",
+    "\n",
+    "## Link to video\n",
+    "https://link.to.your.publicly.viewable.video\n",
+    "\n",
+    "## Abstract\n",
+    "\n",
+    "This project investigates which categories of features best predict whether NBA betting favorites cover the point spread, a task fundamentally harder than simple win/loss prediction because the spread already prices in the expected margin. Using NBA regular-season games from 2010 to 2024, we construct three feature sets: (1) intra-game quarter-by-quarter scoring patterns, (2) team-aggregated box-score statistics such as shooting efficiency and turnovers, and (3) a combined set merging both. We train and compare Logistic Regression, Random Forest, and XGBoost classifiers on each feature set, evaluating them with classification accuracy. Our results show that NEED TO DO THIS PART DONT FORGET"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Authors\n",
+    "\n",
+    "Team list and credits:\n",
+    "- Sanjith Shanmugavel - Software, Experimental Investigation, Analysis, Writing\n",
+    "- Asher King - Software, Writing, Background Research, Conceptualization\n",
+    "- Jessica Lu - Software, Writing, Project Administration, Methodology\n",
+    "- Abby Choi - Software, Writing, Review & Editing, Analysis\n",
+    "- Woojin Lee - Software, Writing, Background Research, Project Administration"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Research Question"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Among quarter-by-quarter scoring patterns, team-aggregated player performance metrics (such as shooting efficiency, rebounding, turnovers, and plus-minus), and the combination of both, which set of features provides the strongest predictive power for whether NBA betting favorites cover the point spread?\n",
+    "\n",
+    "Using publicly available NBA data, we will train and evaluate machine learning classification models on three distinct feature sets: intra-game scoring patterns found from quarter-by-quarter point distributions, team-aggregated player box score stats, like shooting percentages and plus-minus, and finally a combined feature set merging both sets. Our dependent variable is whether the betting favorite covered the spread, and our evaluation metric is classification accuracy. Our unit of analysis is a single NBA game."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Background and Prior Work"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The application of machine learning to NBA game prediction has been a commonly explored area of research. The models these researchers create typically achieve win/loss prediction accuracies in the 65–70% range. A comprehensive systematic review by Agyei-Boakye et al. (2024) looked at dozens of studies applying machine learning to sports betting and found that the most common approaches include Logistic Regression, Random Forest, SVMs, XGBoost, and neural networks. Random Forest and XGBoost were frequently among the top performers for NBA prediction tasks.<a name=\"cite_ref-1\"></a>[<sup>1</sup>](#cite_note-1) For instance, Lin et al. (2014) used box score statistics from NBA games between 1991 and 1998 and achieved 65.15% accuracy with Random Forest, while Cao (2012) reached 69.67% accuracy with a Simple Logistics Classifier.<a name=\"cite_ref-1b\"></a>[<sup>1</sup>](#cite_note-1) However, these studies focus on predicting who the outright winner is rather than spread coverage, which is a fundamentally much harder task because the spread already accounts for the expected margin of victory.\n",
+    "\n",
+    "\n",
+    "An underexplored question in this literature is the relative predictive value of different feature categories. Most existing models rely on either team-level statistics or pre-game ratings. He and Choi (2025) used a model trained on team-level offensive and defensive features from three NBA seasons and found that shooting efficiency variables were the most important predictors of game outcomes.<a name=\"cite_ref-2\"></a>[<sup>2</sup>](#cite_note-2) On the other hand, people have also explored using player-level data as a predictor. One analysis comparing team statistics to aggregated player performance found that player-level stats yielded only 58.66% accuracy compared to a stronger performance from team-level features.<a name=\"cite_ref-3\"></a>[<sup>3</sup>](#cite_note-3) This suggests that while player-level stats do have some meaningful predictive power, team-level features might be more useful.\n",
+    "\n",
+    "\n",
+    "What remains basically completely unexamined in the literature is how intra-game scoring patterns, specifically, quarter-by-quarter point distributions, compare to the usual box score metrics as predictive features for spread coverage. Quarter-by-quarter data captures small dynamics that final scores can't show, such as comeback patterns and dominant first halves. Our project directly addresses this gap by systematically comparing three feature sets: scoring patterns alone, player-derived box score stats alone, and the fusion of both. We want to test not just whether these features predict outcomes, but whether they contain information that the betting market has failed to fully incorporate.\n",
+    "\n",
+    "<a name=\"cite_note-1\"></a>1. Agyei-Boakye, Samuel, et al. \"A Systematic Review of Machine Learning in Sports Betting: Techniques, Challenges, and Future Directions.\" arXiv, 2024, arxiv.org/abs/2410.21484.\n",
+    "\n",
+    "\n",
+    "<a name=\"cite_note-2\"></a>2. He, Guangsen, and Hyun Soo Choi. \"Stacked Ensemble Model for NBA Game Outcome Prediction Analysis.\" Scientific Reports, www.nature.com/articles/s41598-025-13657-1.\n",
+    "\n",
+    "<a name=\"cite_note-3\"></a>3. Cheng, Bryan, et al. \"Predicting the Betting Line in NBA Games.\" 2013, cs229.stanford.edu/proj2013/ChengDadeLipmanMills-PredictingTheBettingLineInNBAGames.pdf."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Hypothesis\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We hypothesize that the combined feature set where we merge quarter-by-quarter scoring patterns with team-aggregated player box score statistics will achieve a higher classification accuracy for predicting spread coverage than either feature set alone. We also predict that all three feature sets will outperform the 50% random baseline.\n",
+    "\n",
+    "More specifically, the player box score feature set will likely be the strongest individual predictor. This hypothesis is supported by the fact that prior work has consistently identified shooting efficiency as the most important predictive feature for NBA outcomes. We expect the quarter-by-quarter scoring feature set to provide a slightly weaker but certainly not a trivial amount of predictive power on its own, since intra-game scoring distributions capture game dynamics like momentum shifts and comeback patterns that aggregated stats miss. We hypothesize that the combined model should benefit from the complementary information."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Data"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Data overview\n",
+    "\n",
+    "We use two primary datasets: historical NBA betting lines with game scores (for point spreads and quarter-by-quarter scoring), and (2) NBA game statistics from official-style box score/team totals tables (for team performance features made from player contributions and/or team totals).\n",
+    "\n",
+    "- Dataset 1\n",
+    "  - Dataset Name: NBA Betting Data (October 2007 to June 2024)\n",
+    "  - Link to the dataset: https://www.kaggle.com/datasets/cviaxmiwnptr/nba-betting-data-october-2007-to-june-2024\n",
+    "  - Number of observations: 33316\n",
+    "  - Number of variables: 57\n",
+    "  - Description of the variables most relevant to this project:\n",
+    "    - Closing point spread in points, indicating the expected margin of victory for the favorite\n",
+    "    - Game scores, and quarter-by-quarter scoring fields for both teams\n",
+    "    - A way to identify the favorite and underdog, or equivalently to identify which team is “laying” points\n",
+    "  - Shortcomings for this project:\n",
+    "    - Betting-line fields may be missing for some games\n",
+    "    - Pushes (favorite wins by exactly the spread) need an explicit handling decision (drop, label separately, or treat as non-cover)\n",
+    "    - Quarter scoring may be missing for some eras, and OT fields (if present) require careful normalization\n",
+    "\n",
+    "- Dataset 2\n",
+    "  - Dataset Name: NBA-Data-2010-2024 (Game totals and/or player box scores)\n",
+    "  - Link to the dataset: https://github.com/NocturneBear/NBA-Data-2010-2024\n",
+    "  - Number of observations: 23118\n",
+    "  - Number of variables: 27\n",
+    "  - Description of the variables most relevant to this project:\n",
+    "    - Team-level box score totals per game (FGM/FGA/FG%, 3PT, FT, OREB/DREB/REB, AST, TOV, STL, BLK, PF, PTS, PLUS_MINUS, etc.)\n",
+    "    - If using player-level box scores, we can aggregate to team-level by game to compute team features consistent with our research question\n",
+    "  - Shortcomings for this project:\n",
+    "    - This dataset does not include betting lines, so it must be merged to Dataset 1\n",
+    "    - Team identifiers may differ in format across datasets (full names vs abbreviations vs tricodes), requiring normalization\n",
+    "    - Some seasons may have missing or inconsistent rows for special cases (neutral sites, rescheduled games)\n",
+    "\n",
+    "Combining datasets\n",
+    "\n",
+    "We will merge the betting dataset (Dataset 1) with the NBA stats dataset (Dataset 2) at the game level. Our preferred join keys are:\n",
+    "- game date (normalized to local date, no time component)\n",
+    "- team identities (home/away team, or favorite/underdog mapped to team abbreviations)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Run this code every time when you're actively developing modules in .py files.  It's not needed if you aren't making modules\n",
+    "#\n",
+    "## this code is necessary for making sure that any modules we load are updated here \n",
+    "## when their source code .py files are modified\n",
+    "\n",
+    "%load_ext autoreload\n",
+    "%autoreload 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "ModuleNotFoundError",
+     "evalue": "No module named 'get_data'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mModuleNotFoundError\u001b[39m                       Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[3]\u001b[39m\u001b[32m, line 11\u001b[39m\n\u001b[32m      8\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01msys\u001b[39;00m\n\u001b[32m      9\u001b[39m sys.path.append(\u001b[33m'\u001b[39m\u001b[33m./modules\u001b[39m\u001b[33m'\u001b[39m) \u001b[38;5;66;03m# this tells python where to look for modules to import\u001b[39;00m\n\u001b[32m---> \u001b[39m\u001b[32m11\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mget_data\u001b[39;00m \u001b[38;5;66;03m# this is where we get the function we need to download data\u001b[39;00m\n\u001b[32m     13\u001b[39m \u001b[38;5;66;03m# replace the urls and filenames in this list with your actual datafiles\u001b[39;00m\n\u001b[32m     14\u001b[39m \u001b[38;5;66;03m# yes you can use Google drive share links or whatever\u001b[39;00m\n\u001b[32m     15\u001b[39m \u001b[38;5;66;03m# format is a list of dictionaries; \u001b[39;00m\n\u001b[32m     16\u001b[39m \u001b[38;5;66;03m# each dict has keys of \u001b[39;00m\n\u001b[32m     17\u001b[39m \u001b[38;5;66;03m#   'url' where the resource is located\u001b[39;00m\n\u001b[32m     18\u001b[39m \u001b[38;5;66;03m#   'filename' for the local filename where it will be stored \u001b[39;00m\n\u001b[32m     19\u001b[39m datafiles = [\n\u001b[32m     20\u001b[39m     \u001b[38;5;66;03m# Team totals (one row per team per game, regular season)\u001b[39;00m\n\u001b[32m     21\u001b[39m     {\n\u001b[32m   (...)\u001b[39m\u001b[32m     38\u001b[39m     },\n\u001b[32m     39\u001b[39m ]\n",
+      "\u001b[31mModuleNotFoundError\u001b[39m: No module named 'get_data'"
+     ]
+    }
+   ],
+   "source": [
+    "# Setup code -- this only needs to be run once after cloning the repo!\n",
+    "# this code downloads the data from its source to the `data/00-raw/` directory\n",
+    "# if the data hasn't updated you don't need to do this again!\n",
+    "\n",
+    "# if you don't already have these packages (you should!) uncomment this line\n",
+    "# %pip install requests tqdm\n",
+    "\n",
+    "import sys\n",
+    "sys.path.append('./modules') # this tells python where to look for modules to import\n",
+    "\n",
+    "import get_data # this is where we get the function we need to download data\n",
+    "\n",
+    "# replace the urls and filenames in this list with your actual datafiles\n",
+    "# yes you can use Google drive share links or whatever\n",
+    "# format is a list of dictionaries; \n",
+    "# each dict has keys of \n",
+    "#   'url' where the resource is located\n",
+    "#   'filename' for the local filename where it will be stored \n",
+    "datafiles = [\n",
+    "    # Team totals (one row per team per game, regular season)\n",
+    "    {\n",
+    "        \"url\": \"https://raw.githubusercontent.com/NocturneBear/NBA-Data-2010-2024/main/regular_season_totals_2010_2024.csv\",\n",
+    "        \"filename\": \"regular_season_totals_2010_2024.csv\",\n",
+    "    },\n",
+    "\n",
+    "    # Player box scores (large, split into 3 parts)\n",
+    "    {\n",
+    "        \"url\": \"https://raw.githubusercontent.com/NocturneBear/NBA-Data-2010-2024/main/regular_season_box_scores_2010_2024_part_1.csv\",\n",
+    "        \"filename\": \"regular_season_box_scores_2010_2024_part_1.csv\",\n",
+    "    },\n",
+    "    {\n",
+    "        \"url\": \"https://raw.githubusercontent.com/NocturneBear/NBA-Data-2010-2024/main/regular_season_box_scores_2010_2024_part_2.csv\",\n",
+    "        \"filename\": \"regular_season_box_scores_2010_2024_part_2.csv\",\n",
+    "    },\n",
+    "    {\n",
+    "        \"url\": \"https://raw.githubusercontent.com/NocturneBear/NBA-Data-2010-2024/main/regular_season_box_scores_2010_2024_part_3.csv\",\n",
+    "        \"filename\": \"regular_season_box_scores_2010_2024_part_3.csv\",\n",
+    "    },\n",
+    "]\n",
+    "\n",
+    "get_data.get_raw(datafiles, destination_directory=\"data/00-raw/\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "ModuleNotFoundError",
+     "evalue": "No module named 'kaggle'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mModuleNotFoundError\u001b[39m                       Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[4]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m \u001b[38;5;28;01mfrom\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mkaggle\u001b[39;00m\u001b[34;01m.\u001b[39;00m\u001b[34;01mapi\u001b[39;00m\u001b[34;01m.\u001b[39;00m\u001b[34;01mkaggle_api_extended\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mimport\u001b[39;00m KaggleApi\n\u001b[32m      2\u001b[39m \u001b[38;5;28;01mfrom\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mpathlib\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mimport\u001b[39;00m Path\n\u001b[32m      4\u001b[39m RAW = Path(\u001b[33m\"\u001b[39m\u001b[33mdata/00-raw\u001b[39m\u001b[33m\"\u001b[39m)\n",
+      "\u001b[31mModuleNotFoundError\u001b[39m: No module named 'kaggle'"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "from kaggle.api.kaggle_api_extended import KaggleApi\n",
+    "from pathlib import Path\n",
+    "\n",
+    "RAW = Path(\"data/00-raw\")\n",
+    "RAW.mkdir(parents=True, exist_ok=True)\n",
+    "\n",
+    "api = KaggleApi()\n",
+    "api.authenticate()\n",
+    "\n",
+    "api.dataset_download_files(\n",
+    "    \"cviaxmiwnptr/nba-betting-data-october-2007-to-june-2024\",\n",
+    "    path=str(RAW),\n",
+    "    unzip=True\n",
+    ")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Dataset 1: NBA betting lines and scoring outcomes (2007–2024)\n",
+    "\n",
+    "This dataset contains historical NBA betting and game outcome information at the game level, including point spreads and final scores. Each row corresponds to a single NBA game, which makes it the primary source for defining our dependent variable, whether the betting favorite covered the point spread.\n",
+    "For our project, this dataset supports two critical components. First, it provides the spread needed to compute the target label. A favorite is considered to have covered when its margin of victory exceeds the absolute value of the spread. Second, this dataset supplies the quarter-by-quarter scoring fields, which we use to build intra-game scoring pattern features such as quarter margins, first-half margin, second-half margin, and third-quarter swing. These features capture within-game dynamics that final scores alone can obscure.\n",
+    "\n",
+    "Key variables and units  \n",
+    "- Point spread is measured in points and indicates the expected margin of victory for the favorite.  \n",
+    "- Points scored.  \n",
+    "- Point differentials.  \n",
+    "- The target label (`favorite_cover`) is a binary indicator derived from spread and final margin.\n",
+    "\n",
+    "Main concerns and limitations    \n",
+    "- This dataset does not contain the detailed team performance statistics (shooting efficiency, rebounds, turnovers, plus-minus) needed for our team-metric feature set, so it must be merged with Dataset 2 using normalized team identifiers.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "Empty DataFrame\n",
+       "Columns: []\n",
+       "Index: []"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "from pathlib import Path\n",
+    "\n",
+    "RAW = Path(\"data/00-raw\")\n",
+    "INTERIM = Path(\"data/01-interim\")\n",
+    "PROCESSED = Path(\"data/02-processed\")\n",
+    "\n",
+    "d1_files = sorted(RAW.glob(\"regular_season_*.csv\"))\n",
+    "\n",
+    "def clean_and_summarize(csv_path: Path):\n",
+    "    df = pd.read_csv(csv_path)\n",
+    "\n",
+    "    print(\"\\nFILE\", csv_path.name)\n",
+    "    print(\"shape\", df.shape)\n",
+    "    display(df.head())\n",
+    "\n",
+    "    if \"GAME_DATE\" in df.columns:\n",
+    "        df[\"GAME_DATE\"] = pd.to_datetime(df[\"GAME_DATE\"], errors=\"coerce\")\n",
+    "\n",
+    "    missing = df.isna().mean().sort_values(ascending=False).head(15)\n",
+    "    display(missing)\n",
+    "\n",
+    "    pct_cols = [c for c in [\"FG_PCT\", \"FG3_PCT\", \"FT_PCT\"] if c in df.columns]\n",
+    "    if pct_cols:\n",
+    "        bad_pct = df[pct_cols].apply(lambda s: (s < 0) | (s > 1)).any(axis=1)\n",
+    "        print(\"rows with suspicious pct\", int(bad_pct.sum()))\n",
+    "\n",
+    "    if \"PTS\" in df.columns:\n",
+    "        bad_pts = (df[\"PTS\"] < 0) | (df[\"PTS\"] > 200)\n",
+    "        print(\"rows with suspicious pts\", int(bad_pts.sum()))\n",
+    "\n",
+    "    key_candidates = [\"GAME_ID\", \"TEAM_ID\", \"PLAYER_ID\", \"GAME_DATE\"]\n",
+    "    keys = [c for c in key_candidates if c in df.columns]\n",
+    "    if keys:\n",
+    "        df_clean = df.dropna(subset=keys).copy()\n",
+    "    else:\n",
+    "        df_clean = df.dropna(how=\"all\").copy()\n",
+    "    out_name = csv_path.stem.replace(\"regular_season_\", \"\") + \"_clean.csv\"\n",
+    "    df_clean.to_csv(INTERIM / f\"interim_{out_name}\", index=False)\n",
+    "    df_clean.to_csv(PROCESSED / f\"processed_{out_name}\", index=False)\n",
+    "\n",
+    "    return {\n",
+    "        \"file\": csv_path.name,\n",
+    "        \"rows\": df.shape[0],\n",
+    "        \"cols\": df.shape[1],\n",
+    "        \"rows_after_clean\": df_clean.shape[0],\n",
+    "        \"cols_after_clean\": df_clean.shape[1],\n",
+    "    }\n",
+    "\n",
+    "summaries = [clean_and_summarize(p) for p in d1_files]\n",
+    "summary_df = pd.DataFrame(summaries)\n",
+    "display(summary_df)\n",
+    "for r in summaries:\n",
+    "    print(f\"- {r['file']}  observations {r['rows']}  variables {r['cols']}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Dataset 2: NBA team performance statistics from box scores and game totals (2010–2024)\n",
+    "\n",
+    "This dataset comes from the NBA-Data-2010-2024 repository and includes NBA statistics tables from official-style box scores and team game totals. The repository provides both player box score tables and team game totals tables. The published schema includes standard basketball counting stats (field goals, three-pointers, free throws, rebounds, assists, turnovers, steals, blocks, fouls, points) and efficiency percentages, as well as plus-minus.\n",
+    "\n",
+    "For our project, we will primarily use the team game totals tables because they already represent team-aggregated performance per game and directly match our planned feature set (shooting efficiency, rebounding, turnovers, and plus-minus). If needed for additional engineered features, we can also derive team-level features by aggregating the player-level box score table by (gameId, teamId).\n",
+    "\n",
+    "Key variables and units\n",
+    "- Points, rebounds, assists, turnovers, etc. are counts per game.\n",
+    "- FG_PCT, FG3_PCT, FT_PCT are proportions in [0, 1]\n",
+    "- PLUS_MINUS (point differential when the team/player is on the floor)\n",
+    "\n",
+    "Main concerns and limitations\n",
+    "- There is no betting information here, so this dataset must be merged with Dataset 1.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "FileNotFoundError",
+     "evalue": "[Errno 2] No such file or directory: 'data\\\\00-raw\\\\nba_2008-2025.csv'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mFileNotFoundError\u001b[39m                         Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[6]\u001b[39m\u001b[32m, line 8\u001b[39m\n\u001b[32m      5\u001b[39m INTERIM = Path(\u001b[33m\"\u001b[39m\u001b[33mdata/01-interim\u001b[39m\u001b[33m\"\u001b[39m)\n\u001b[32m      6\u001b[39m PROCESSED = Path(\u001b[33m\"\u001b[39m\u001b[33mdata/02-processed\u001b[39m\u001b[33m\"\u001b[39m)\n\u001b[32m----> \u001b[39m\u001b[32m8\u001b[39m bet = \u001b[43mpd\u001b[49m\u001b[43m.\u001b[49m\u001b[43mread_csv\u001b[49m\u001b[43m(\u001b[49m\u001b[43mRAW\u001b[49m\u001b[43m \u001b[49m\u001b[43m/\u001b[49m\u001b[43m \u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mnba_2008-2025.csv\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[32m     10\u001b[39m bet.columns = bet.columns.str.strip()\n\u001b[32m     12\u001b[39m \u001b[38;5;28mprint\u001b[39m(\u001b[33m\"\u001b[39m\u001b[33mshape\u001b[39m\u001b[33m\"\u001b[39m, bet.shape)\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\anaconda3\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py:1026\u001b[39m, in \u001b[36mread_csv\u001b[39m\u001b[34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)\u001b[39m\n\u001b[32m   1013\u001b[39m kwds_defaults = _refine_defaults_read(\n\u001b[32m   1014\u001b[39m     dialect,\n\u001b[32m   1015\u001b[39m     delimiter,\n\u001b[32m   (...)\u001b[39m\u001b[32m   1022\u001b[39m     dtype_backend=dtype_backend,\n\u001b[32m   1023\u001b[39m )\n\u001b[32m   1024\u001b[39m kwds.update(kwds_defaults)\n\u001b[32m-> \u001b[39m\u001b[32m1026\u001b[39m \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43m_read\u001b[49m\u001b[43m(\u001b[49m\u001b[43mfilepath_or_buffer\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mkwds\u001b[49m\u001b[43m)\u001b[49m\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\anaconda3\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py:620\u001b[39m, in \u001b[36m_read\u001b[39m\u001b[34m(filepath_or_buffer, kwds)\u001b[39m\n\u001b[32m    617\u001b[39m _validate_names(kwds.get(\u001b[33m\"\u001b[39m\u001b[33mnames\u001b[39m\u001b[33m\"\u001b[39m, \u001b[38;5;28;01mNone\u001b[39;00m))\n\u001b[32m    619\u001b[39m \u001b[38;5;66;03m# Create the parser.\u001b[39;00m\n\u001b[32m--> \u001b[39m\u001b[32m620\u001b[39m parser = \u001b[43mTextFileReader\u001b[49m\u001b[43m(\u001b[49m\u001b[43mfilepath_or_buffer\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43m*\u001b[49m\u001b[43m*\u001b[49m\u001b[43mkwds\u001b[49m\u001b[43m)\u001b[49m\n\u001b[32m    622\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m chunksize \u001b[38;5;129;01mor\u001b[39;00m iterator:\n\u001b[32m    623\u001b[39m     \u001b[38;5;28;01mreturn\u001b[39;00m parser\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\anaconda3\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py:1620\u001b[39m, in \u001b[36mTextFileReader.__init__\u001b[39m\u001b[34m(self, f, engine, **kwds)\u001b[39m\n\u001b[32m   1617\u001b[39m     \u001b[38;5;28mself\u001b[39m.options[\u001b[33m\"\u001b[39m\u001b[33mhas_index_names\u001b[39m\u001b[33m\"\u001b[39m] = kwds[\u001b[33m\"\u001b[39m\u001b[33mhas_index_names\u001b[39m\u001b[33m\"\u001b[39m]\n\u001b[32m   1619\u001b[39m \u001b[38;5;28mself\u001b[39m.handles: IOHandles | \u001b[38;5;28;01mNone\u001b[39;00m = \u001b[38;5;28;01mNone\u001b[39;00m\n\u001b[32m-> \u001b[39m\u001b[32m1620\u001b[39m \u001b[38;5;28mself\u001b[39m._engine = \u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43m_make_engine\u001b[49m\u001b[43m(\u001b[49m\u001b[43mf\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43mengine\u001b[49m\u001b[43m)\u001b[49m\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\anaconda3\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py:1880\u001b[39m, in \u001b[36mTextFileReader._make_engine\u001b[39m\u001b[34m(self, f, engine)\u001b[39m\n\u001b[32m   1878\u001b[39m     \u001b[38;5;28;01mif\u001b[39;00m \u001b[33m\"\u001b[39m\u001b[33mb\u001b[39m\u001b[33m\"\u001b[39m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;129;01min\u001b[39;00m mode:\n\u001b[32m   1879\u001b[39m         mode += \u001b[33m\"\u001b[39m\u001b[33mb\u001b[39m\u001b[33m\"\u001b[39m\n\u001b[32m-> \u001b[39m\u001b[32m1880\u001b[39m \u001b[38;5;28mself\u001b[39m.handles = \u001b[43mget_handle\u001b[49m\u001b[43m(\u001b[49m\n\u001b[32m   1881\u001b[39m \u001b[43m    \u001b[49m\u001b[43mf\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1882\u001b[39m \u001b[43m    \u001b[49m\u001b[43mmode\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1883\u001b[39m \u001b[43m    \u001b[49m\u001b[43mencoding\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43moptions\u001b[49m\u001b[43m.\u001b[49m\u001b[43mget\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mencoding\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43;01mNone\u001b[39;49;00m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1884\u001b[39m \u001b[43m    \u001b[49m\u001b[43mcompression\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43moptions\u001b[49m\u001b[43m.\u001b[49m\u001b[43mget\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mcompression\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43;01mNone\u001b[39;49;00m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1885\u001b[39m \u001b[43m    \u001b[49m\u001b[43mmemory_map\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43moptions\u001b[49m\u001b[43m.\u001b[49m\u001b[43mget\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mmemory_map\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43;01mFalse\u001b[39;49;00m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1886\u001b[39m \u001b[43m    \u001b[49m\u001b[43mis_text\u001b[49m\u001b[43m=\u001b[49m\u001b[43mis_text\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1887\u001b[39m \u001b[43m    \u001b[49m\u001b[43merrors\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43moptions\u001b[49m\u001b[43m.\u001b[49m\u001b[43mget\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mencoding_errors\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mstrict\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1888\u001b[39m \u001b[43m    \u001b[49m\u001b[43mstorage_options\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43moptions\u001b[49m\u001b[43m.\u001b[49m\u001b[43mget\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mstorage_options\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43;01mNone\u001b[39;49;00m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1889\u001b[39m \u001b[43m\u001b[49m\u001b[43m)\u001b[49m\n\u001b[32m   1890\u001b[39m \u001b[38;5;28;01massert\u001b[39;00m \u001b[38;5;28mself\u001b[39m.handles \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m\n\u001b[32m   1891\u001b[39m f = \u001b[38;5;28mself\u001b[39m.handles.handle\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\anaconda3\\Lib\\site-packages\\pandas\\io\\common.py:873\u001b[39m, in \u001b[36mget_handle\u001b[39m\u001b[34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)\u001b[39m\n\u001b[32m    868\u001b[39m \u001b[38;5;28;01melif\u001b[39;00m \u001b[38;5;28misinstance\u001b[39m(handle, \u001b[38;5;28mstr\u001b[39m):\n\u001b[32m    869\u001b[39m     \u001b[38;5;66;03m# Check whether the filename is to be opened in binary mode.\u001b[39;00m\n\u001b[32m    870\u001b[39m     \u001b[38;5;66;03m# Binary mode does not support 'encoding' and 'newline'.\u001b[39;00m\n\u001b[32m    871\u001b[39m     \u001b[38;5;28;01mif\u001b[39;00m ioargs.encoding \u001b[38;5;129;01mand\u001b[39;00m \u001b[33m\"\u001b[39m\u001b[33mb\u001b[39m\u001b[33m\"\u001b[39m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;129;01min\u001b[39;00m ioargs.mode:\n\u001b[32m    872\u001b[39m         \u001b[38;5;66;03m# Encoding\u001b[39;00m\n\u001b[32m--> \u001b[39m\u001b[32m873\u001b[39m         handle = \u001b[38;5;28;43mopen\u001b[39;49m\u001b[43m(\u001b[49m\n\u001b[32m    874\u001b[39m \u001b[43m            \u001b[49m\u001b[43mhandle\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m    875\u001b[39m \u001b[43m            \u001b[49m\u001b[43mioargs\u001b[49m\u001b[43m.\u001b[49m\u001b[43mmode\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m    876\u001b[39m \u001b[43m            \u001b[49m\u001b[43mencoding\u001b[49m\u001b[43m=\u001b[49m\u001b[43mioargs\u001b[49m\u001b[43m.\u001b[49m\u001b[43mencoding\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m    877\u001b[39m \u001b[43m            \u001b[49m\u001b[43merrors\u001b[49m\u001b[43m=\u001b[49m\u001b[43merrors\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m    878\u001b[39m \u001b[43m            \u001b[49m\u001b[43mnewline\u001b[49m\u001b[43m=\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\n\u001b[32m    879\u001b[39m \u001b[43m        \u001b[49m\u001b[43m)\u001b[49m\n\u001b[32m    880\u001b[39m     \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[32m    881\u001b[39m         \u001b[38;5;66;03m# Binary mode\u001b[39;00m\n\u001b[32m    882\u001b[39m         handle = \u001b[38;5;28mopen\u001b[39m(handle, ioargs.mode)\n",
+      "\u001b[31mFileNotFoundError\u001b[39m: [Errno 2] No such file or directory: 'data\\\\00-raw\\\\nba_2008-2025.csv'"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "from pathlib import Path\n",
+    "\n",
+    "RAW = Path(\"data/00-raw\")\n",
+    "INTERIM = Path(\"data/01-interim\")\n",
+    "PROCESSED = Path(\"data/02-processed\")\n",
+    "\n",
+    "bet = pd.read_csv(RAW / \"nba_2008-2025.csv\")\n",
+    "\n",
+    "bet.columns = bet.columns.str.strip()\n",
+    "\n",
+    "print(\"shape\", bet.shape)\n",
+    "display(bet.head())\n",
+    "\n",
+    "missing = bet.isna().mean().sort_values(ascending=False)\n",
+    "display(missing.head(15))\n",
+    "\n",
+    "num = bet.select_dtypes(\"number\")\n",
+    "if not num.empty:\n",
+    "    display(num.describe().T[[\"min\", \"max\"]].head(15))\n",
+    "\n",
+    "bet_clean = bet.dropna(how='all').copy()\n",
+    "\n",
+    "bet_clean.to_csv(INTERIM / \"betting_interim.csv\", index=False)\n",
+    "bet_clean.to_csv(PROCESSED / \"betting_clean.csv\", index=False)\n",
+    "print(f\"observations {bet.shape[0]}  variables {bet.shape[1]}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Results\n",
+    "\n",
+    "### Exploratory Data Analysis\n",
+    "\n",
+    "In our EDA, we will explore the two processed datasets to evaluate the individual and combined predictive power of quarter-by-quarter scoring and team box score metrics. Our EDA is divided into 3 main objectives:\n",
+    "1. Exploring the Target Variable: Defining and exploring our dependent variable: whether the betting favorite covered the spread.\n",
+    "2. Feature Set 1 Analysis (Intra-game Scoring): Analyzing how quarter-by-quarter point differentials relate to spread coverage.\n",
+    "3. Feature Set 2 Analysis (Team Box Scores): Analyzing how traditional efficiency metrics like FG% and Rebounds correlate with our target variable.\n",
+    "\n",
+    "We start our EDA process by loading our clean data from the data/02-processed directory."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt\n",
+    "import seaborn as sns\n",
+    "from pathlib import Path\n",
+    "\n",
+    "sns.set_theme(style=\"whitegrid\", palette=\"muted\")\n",
+    "plt.rcParams.update({'figure.titlesize': 16, 'axes.labelsize': 12, 'axes.titlesize': 14})\n",
+    "\n",
+    "betting_df = pd.read_csv(\"data/02-processed/betting_clean.csv\")\n",
+    "totals_df = pd.read_csv(\"data/02-processed/processed_totals_2010_2024_clean.csv\")\n",
+    "\n",
+    "# Standardize date formats\n",
+    "if \"GAME_DATE\" in betting_df.columns:\n",
+    "    betting_df[\"GAME_DATE\"] = pd.to_datetime(betting_df[\"GAME_DATE\"])\n",
+    "if \"GAME_DATE\" in totals_df.columns:\n",
+    "    totals_df[\"GAME_DATE\"] = pd.to_datetime(totals_df[\"GAME_DATE\"])\n",
+    "\n",
+    "print(f\"Betting Data Shape: {betting_df.shape}\")\n",
+    "print(f\"Totals Data Shape: {totals_df.shape}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Section 1: Exploring the Target Variable\n",
+    "\n",
+    "Before we analyze our features, we should accurate define our target variable. The target variable for our study is favorite_cover. A betting favorite covers the spread if their final margin of victory is strictly greater than the point spread. If the margin equals the spread, it is considered a push or a tie, which we will drop for the sake of our binary classification. \n",
+    "\n",
+    "In this section, we will calculate the favorite's actual margin of victory and compare it to the spread line to create our binary label."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'betting_df' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[7]\u001b[39m\u001b[32m, line 13\u001b[39m\n\u001b[32m     10\u001b[39m     \u001b[38;5;28;01mreturn\u001b[39;00m np.nan\n\u001b[32m     12\u001b[39m \u001b[38;5;66;03m# Apply function to create the margin column\u001b[39;00m\n\u001b[32m---> \u001b[39m\u001b[32m13\u001b[39m betting_df[\u001b[33m'\u001b[39m\u001b[33mfavorite_margin\u001b[39m\u001b[33m'\u001b[39m] = \u001b[43mbetting_df\u001b[49m.apply(calculate_margin, axis=\u001b[32m1\u001b[39m)\n\u001b[32m     15\u001b[39m \u001b[38;5;66;03m# 2. Determine if favorite covered (1), failed to cover (0), or tied (NaN)\u001b[39;00m\n\u001b[32m     16\u001b[39m conditions = [\n\u001b[32m     17\u001b[39m     betting_df[\u001b[33m'\u001b[39m\u001b[33mfavorite_margin\u001b[39m\u001b[33m'\u001b[39m] > betting_df[\u001b[33m'\u001b[39m\u001b[33mspread\u001b[39m\u001b[33m'\u001b[39m],  \u001b[38;5;66;03m# Cover\u001b[39;00m\n\u001b[32m     18\u001b[39m     betting_df[\u001b[33m'\u001b[39m\u001b[33mfavorite_margin\u001b[39m\u001b[33m'\u001b[39m] < betting_df[\u001b[33m'\u001b[39m\u001b[33mspread\u001b[39m\u001b[33m'\u001b[39m]   \u001b[38;5;66;03m# No Cover\u001b[39;00m\n\u001b[32m     19\u001b[39m ]\n",
+      "\u001b[31mNameError\u001b[39m: name 'betting_df' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "# 1. Calculate actual margin of victory for favored team\n",
+    "\n",
+    "def calculate_margin(row):\n",
+    "    if pd.isna(row['whos_favored']) or pd.isna(row['spread']):\n",
+    "        return np.nan\n",
+    "    if row['whos_favored'] == 'home':\n",
+    "        return row['score_home'] - row['score_away']\n",
+    "    elif row['whos_favored'] == 'away':\n",
+    "        return row['score_away'] - row['score_home']\n",
+    "    return np.nan\n",
+    "\n",
+    "# Apply function to create the margin column\n",
+    "betting_df['favorite_margin'] = betting_df.apply(calculate_margin, axis=1)\n",
+    "\n",
+    "# 2. Determine if favorite covered (1), failed to cover (0), or tied (NaN)\n",
+    "conditions = [\n",
+    "    betting_df['favorite_margin'] > betting_df['spread'],  # Cover\n",
+    "    betting_df['favorite_margin'] < betting_df['spread']   # No Cover\n",
+    "]\n",
+    "choices = [1, 0]\n",
+    "betting_df['favorite_cover'] = np.select(conditions, choices, default=np.nan)\n",
+    "\n",
+    "# 3. Drop ties\n",
+    "betting_df = betting_df.dropna(subset=['favorite_cover']).copy()\n",
+    "\n",
+    "# Visualization \n",
+    "fig, ax = plt.subplots(1, 2, figsize=(14, 5))\n",
+    "\n",
+    "# Plot 1: Class balance (Countplot)\n",
+    "sns.countplot(data=betting_df, x='favorite_cover', ax=ax[0])\n",
+    "ax[0].set_title(\"Distribution of Target Variable (Spread Coverage)\")\n",
+    "ax[0].set_xlabel(\"Did Favorite Cover? (0 = No, 1 = Yes)\")\n",
+    "ax[0].set_ylabel(\"Number of Games\")\n",
+    "\n",
+    "# Plot 2: Actual Margin vs Spread (KDE Plot)\n",
+    "sns.kdeplot(data=betting_df, x='favorite_margin', label='Actual Margin', fill=True, ax=ax[1])\n",
+    "sns.kdeplot(data=betting_df, x='spread', label='Point Spread', fill=True, ax=ax[1])\n",
+    "ax[1].set_title(\"Distribution of Favorite's Margin vs. Point Spread\")\n",
+    "ax[1].set_xlabel(\"Points\")\n",
+    "ax[1].set_ylabel(\"Density\")\n",
+    "ax[1].legend()\n",
+    "\n",
+    "plt.tight_layout()\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Section 2 of EDA: Intra-game Scoring and Spread Coverage\n",
+    "\n",
+    "Exploring whether the favorite's first-half scoring margin meaningfully differs between games where they cover the spread and games where they do not in order to evaluate early-game performance as a significant predictor of spread coverage."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'betting_df' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[8]\u001b[39m\u001b[32m, line 10\u001b[39m\n\u001b[32m      7\u001b[39m         \u001b[38;5;28;01mreturn\u001b[39;00m row[\u001b[33mf\u001b[39m\u001b[33m'\u001b[39m\u001b[33mq\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mquarter\u001b[38;5;132;01m}\u001b[39;00m\u001b[33m_away\u001b[39m\u001b[33m'\u001b[39m] - row[\u001b[33mf\u001b[39m\u001b[33m'\u001b[39m\u001b[33mq\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mquarter\u001b[38;5;132;01m}\u001b[39;00m\u001b[33m_home\u001b[39m\u001b[33m'\u001b[39m]\n\u001b[32m      8\u001b[39m     \u001b[38;5;28;01mreturn\u001b[39;00m np.nan\n\u001b[32m---> \u001b[39m\u001b[32m10\u001b[39m betting_df[\u001b[33m'\u001b[39m\u001b[33mfav_q1_diff\u001b[39m\u001b[33m'\u001b[39m] = \u001b[43mbetting_df\u001b[49m.apply(\u001b[38;5;28;01mlambda\u001b[39;00m row: fav_quarter_diff(row, \u001b[32m1\u001b[39m), axis=\u001b[32m1\u001b[39m)\n\u001b[32m     11\u001b[39m betting_df[\u001b[33m'\u001b[39m\u001b[33mfav_q2_diff\u001b[39m\u001b[33m'\u001b[39m] = betting_df.apply(\u001b[38;5;28;01mlambda\u001b[39;00m row: fav_quarter_diff(row, \u001b[32m2\u001b[39m), axis=\u001b[32m1\u001b[39m)\n\u001b[32m     13\u001b[39m \u001b[38;5;66;03m# 2. Compute first-half margin\u001b[39;00m\n",
+      "\u001b[31mNameError\u001b[39m: name 'betting_df' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "# 1. Calculate first-quarter and second-quarter differentials (favorite perspective)\n",
+    "\n",
+    "def fav_quarter_diff(row, quarter):\n",
+    "    if row['whos_favored'] == 'home':\n",
+    "        return row[f'q{quarter}_home'] - row[f'q{quarter}_away']\n",
+    "    elif row['whos_favored'] == 'away':\n",
+    "        return row[f'q{quarter}_away'] - row[f'q{quarter}_home']\n",
+    "    return np.nan\n",
+    "\n",
+    "betting_df['fav_q1_diff'] = betting_df.apply(lambda row: fav_quarter_diff(row, 1), axis=1)\n",
+    "betting_df['fav_q2_diff'] = betting_df.apply(lambda row: fav_quarter_diff(row, 2), axis=1)\n",
+    "\n",
+    "# 2. Compute first-half margin\n",
+    "betting_df['fav_first_half_margin'] = (\n",
+    "betting_df['fav_q1_diff'] + betting_df['fav_q2_diff']\n",
+    ")\n",
+    "\n",
+    "# 3. Visualization\n",
+    "fig, ax = plt.subplots(1, 2, figsize=(14, 5))\n",
+    "\n",
+    "# Plot 1: Boxplot by coverage outcome\n",
+    "sns.boxplot(data=betting_df, x='favorite_cover', y='fav_first_half_margin', ax=ax[0])\n",
+    "ax[0].set_title(\"First-Half Margin by Spread Coverage\")\n",
+    "ax[0].set_xlabel(\"Did Favorite Cover? (0 = No, 1 = Yes)\")\n",
+    "ax[0].set_ylabel(\"Favorite First-Half Margin\")\n",
+    "\n",
+    "# Plot 2: KDE comparison\n",
+    "sns.kdeplot(data=betting_df, x='fav_first_half_margin', hue='favorite_cover', fill=True, ax=ax[1])\n",
+    "ax[1].set_title(\"Distribution of First-Half Margin by Outcome\")\n",
+    "ax[1].set_xlabel(\"Favorite First-Half Margin\")\n",
+    "ax[1].set_ylabel(\"Density\")\n",
+    "\n",
+    "plt.tight_layout()\n",
+    "plt.show()\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Section 3 of EDA: Team Box Score Metrics and Spread Coverage\n",
+    "\n",
+    "In this section we explore the relationship between traditional team-level performance metrics like field-goal percentage (FG_PCT), three-point percentage (FG3_PCT), total rebounds (REB), and plus-minus (PLUS_MINUS). Our target variable is favorite_cover. We examine distributions and statistical significance to determine whether these features carry meaningful predictive signal for spread coverage."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "FileNotFoundError",
+     "evalue": "[Errno 2] No such file or directory: 'data/02-processed/processed_totals_2010_2024_clean.csv'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mFileNotFoundError\u001b[39m                         Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[9]\u001b[39m\u001b[32m, line 13\u001b[39m\n\u001b[32m      8\u001b[39m plt.rcParams.update({\u001b[33m'\u001b[39m\u001b[33mfigure.titlesize\u001b[39m\u001b[33m'\u001b[39m: \u001b[32m16\u001b[39m, \u001b[33m'\u001b[39m\u001b[33maxes.labelsize\u001b[39m\u001b[33m'\u001b[39m: \u001b[32m12\u001b[39m,\n\u001b[32m      9\u001b[39m                      \u001b[33m'\u001b[39m\u001b[33maxes.titlesize\u001b[39m\u001b[33m'\u001b[39m: \u001b[32m14\u001b[39m})\n\u001b[32m     11\u001b[39m Path(\u001b[33m\"\u001b[39m\u001b[33mresults\u001b[39m\u001b[33m\"\u001b[39m).mkdir(exist_ok=\u001b[38;5;28;01mTrue\u001b[39;00m)\n\u001b[32m---> \u001b[39m\u001b[32m13\u001b[39m totals_df  = \u001b[43mpd\u001b[49m\u001b[43m.\u001b[49m\u001b[43mread_csv\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mdata/02-processed/processed_totals_2010_2024_clean.csv\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m)\u001b[49m\n\u001b[32m     15\u001b[39m \u001b[38;5;66;03m# Normalize dates\u001b[39;00m\n\u001b[32m     16\u001b[39m betting_df[\u001b[33m'\u001b[39m\u001b[33mdate\u001b[39m\u001b[33m'\u001b[39m] = pd.to_datetime(betting_df[\u001b[33m'\u001b[39m\u001b[33mdate\u001b[39m\u001b[33m'\u001b[39m])\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\anaconda3\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py:1026\u001b[39m, in \u001b[36mread_csv\u001b[39m\u001b[34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)\u001b[39m\n\u001b[32m   1013\u001b[39m kwds_defaults = _refine_defaults_read(\n\u001b[32m   1014\u001b[39m     dialect,\n\u001b[32m   1015\u001b[39m     delimiter,\n\u001b[32m   (...)\u001b[39m\u001b[32m   1022\u001b[39m     dtype_backend=dtype_backend,\n\u001b[32m   1023\u001b[39m )\n\u001b[32m   1024\u001b[39m kwds.update(kwds_defaults)\n\u001b[32m-> \u001b[39m\u001b[32m1026\u001b[39m \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43m_read\u001b[49m\u001b[43m(\u001b[49m\u001b[43mfilepath_or_buffer\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mkwds\u001b[49m\u001b[43m)\u001b[49m\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\anaconda3\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py:620\u001b[39m, in \u001b[36m_read\u001b[39m\u001b[34m(filepath_or_buffer, kwds)\u001b[39m\n\u001b[32m    617\u001b[39m _validate_names(kwds.get(\u001b[33m\"\u001b[39m\u001b[33mnames\u001b[39m\u001b[33m\"\u001b[39m, \u001b[38;5;28;01mNone\u001b[39;00m))\n\u001b[32m    619\u001b[39m \u001b[38;5;66;03m# Create the parser.\u001b[39;00m\n\u001b[32m--> \u001b[39m\u001b[32m620\u001b[39m parser = \u001b[43mTextFileReader\u001b[49m\u001b[43m(\u001b[49m\u001b[43mfilepath_or_buffer\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43m*\u001b[49m\u001b[43m*\u001b[49m\u001b[43mkwds\u001b[49m\u001b[43m)\u001b[49m\n\u001b[32m    622\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m chunksize \u001b[38;5;129;01mor\u001b[39;00m iterator:\n\u001b[32m    623\u001b[39m     \u001b[38;5;28;01mreturn\u001b[39;00m parser\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\anaconda3\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py:1620\u001b[39m, in \u001b[36mTextFileReader.__init__\u001b[39m\u001b[34m(self, f, engine, **kwds)\u001b[39m\n\u001b[32m   1617\u001b[39m     \u001b[38;5;28mself\u001b[39m.options[\u001b[33m\"\u001b[39m\u001b[33mhas_index_names\u001b[39m\u001b[33m\"\u001b[39m] = kwds[\u001b[33m\"\u001b[39m\u001b[33mhas_index_names\u001b[39m\u001b[33m\"\u001b[39m]\n\u001b[32m   1619\u001b[39m \u001b[38;5;28mself\u001b[39m.handles: IOHandles | \u001b[38;5;28;01mNone\u001b[39;00m = \u001b[38;5;28;01mNone\u001b[39;00m\n\u001b[32m-> \u001b[39m\u001b[32m1620\u001b[39m \u001b[38;5;28mself\u001b[39m._engine = \u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43m_make_engine\u001b[49m\u001b[43m(\u001b[49m\u001b[43mf\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43mengine\u001b[49m\u001b[43m)\u001b[49m\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\anaconda3\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py:1880\u001b[39m, in \u001b[36mTextFileReader._make_engine\u001b[39m\u001b[34m(self, f, engine)\u001b[39m\n\u001b[32m   1878\u001b[39m     \u001b[38;5;28;01mif\u001b[39;00m \u001b[33m\"\u001b[39m\u001b[33mb\u001b[39m\u001b[33m\"\u001b[39m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;129;01min\u001b[39;00m mode:\n\u001b[32m   1879\u001b[39m         mode += \u001b[33m\"\u001b[39m\u001b[33mb\u001b[39m\u001b[33m\"\u001b[39m\n\u001b[32m-> \u001b[39m\u001b[32m1880\u001b[39m \u001b[38;5;28mself\u001b[39m.handles = \u001b[43mget_handle\u001b[49m\u001b[43m(\u001b[49m\n\u001b[32m   1881\u001b[39m \u001b[43m    \u001b[49m\u001b[43mf\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1882\u001b[39m \u001b[43m    \u001b[49m\u001b[43mmode\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1883\u001b[39m \u001b[43m    \u001b[49m\u001b[43mencoding\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43moptions\u001b[49m\u001b[43m.\u001b[49m\u001b[43mget\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mencoding\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43;01mNone\u001b[39;49;00m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1884\u001b[39m \u001b[43m    \u001b[49m\u001b[43mcompression\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43moptions\u001b[49m\u001b[43m.\u001b[49m\u001b[43mget\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mcompression\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43;01mNone\u001b[39;49;00m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1885\u001b[39m \u001b[43m    \u001b[49m\u001b[43mmemory_map\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43moptions\u001b[49m\u001b[43m.\u001b[49m\u001b[43mget\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mmemory_map\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43;01mFalse\u001b[39;49;00m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1886\u001b[39m \u001b[43m    \u001b[49m\u001b[43mis_text\u001b[49m\u001b[43m=\u001b[49m\u001b[43mis_text\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1887\u001b[39m \u001b[43m    \u001b[49m\u001b[43merrors\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43moptions\u001b[49m\u001b[43m.\u001b[49m\u001b[43mget\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mencoding_errors\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mstrict\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1888\u001b[39m \u001b[43m    \u001b[49m\u001b[43mstorage_options\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43moptions\u001b[49m\u001b[43m.\u001b[49m\u001b[43mget\u001b[49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mstorage_options\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43;01mNone\u001b[39;49;00m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m   1889\u001b[39m \u001b[43m\u001b[49m\u001b[43m)\u001b[49m\n\u001b[32m   1890\u001b[39m \u001b[38;5;28;01massert\u001b[39;00m \u001b[38;5;28mself\u001b[39m.handles \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m\n\u001b[32m   1891\u001b[39m f = \u001b[38;5;28mself\u001b[39m.handles.handle\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m~\\anaconda3\\Lib\\site-packages\\pandas\\io\\common.py:873\u001b[39m, in \u001b[36mget_handle\u001b[39m\u001b[34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)\u001b[39m\n\u001b[32m    868\u001b[39m \u001b[38;5;28;01melif\u001b[39;00m \u001b[38;5;28misinstance\u001b[39m(handle, \u001b[38;5;28mstr\u001b[39m):\n\u001b[32m    869\u001b[39m     \u001b[38;5;66;03m# Check whether the filename is to be opened in binary mode.\u001b[39;00m\n\u001b[32m    870\u001b[39m     \u001b[38;5;66;03m# Binary mode does not support 'encoding' and 'newline'.\u001b[39;00m\n\u001b[32m    871\u001b[39m     \u001b[38;5;28;01mif\u001b[39;00m ioargs.encoding \u001b[38;5;129;01mand\u001b[39;00m \u001b[33m\"\u001b[39m\u001b[33mb\u001b[39m\u001b[33m\"\u001b[39m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;129;01min\u001b[39;00m ioargs.mode:\n\u001b[32m    872\u001b[39m         \u001b[38;5;66;03m# Encoding\u001b[39;00m\n\u001b[32m--> \u001b[39m\u001b[32m873\u001b[39m         handle = \u001b[38;5;28;43mopen\u001b[39;49m\u001b[43m(\u001b[49m\n\u001b[32m    874\u001b[39m \u001b[43m            \u001b[49m\u001b[43mhandle\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m    875\u001b[39m \u001b[43m            \u001b[49m\u001b[43mioargs\u001b[49m\u001b[43m.\u001b[49m\u001b[43mmode\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m    876\u001b[39m \u001b[43m            \u001b[49m\u001b[43mencoding\u001b[49m\u001b[43m=\u001b[49m\u001b[43mioargs\u001b[49m\u001b[43m.\u001b[49m\u001b[43mencoding\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m    877\u001b[39m \u001b[43m            \u001b[49m\u001b[43merrors\u001b[49m\u001b[43m=\u001b[49m\u001b[43merrors\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m    878\u001b[39m \u001b[43m            \u001b[49m\u001b[43mnewline\u001b[49m\u001b[43m=\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\n\u001b[32m    879\u001b[39m \u001b[43m        \u001b[49m\u001b[43m)\u001b[49m\n\u001b[32m    880\u001b[39m     \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[32m    881\u001b[39m         \u001b[38;5;66;03m# Binary mode\u001b[39;00m\n\u001b[32m    882\u001b[39m         handle = \u001b[38;5;28mopen\u001b[39m(handle, ioargs.mode)\n",
+      "\u001b[31mFileNotFoundError\u001b[39m: [Errno 2] No such file or directory: 'data/02-processed/processed_totals_2010_2024_clean.csv'"
+     ]
+    }
+   ],
+   "source": [
+    "# Merging betting data with team totals\n",
+    "\n",
+    "import pandas as pd, numpy as np, matplotlib.pyplot as plt, seaborn as sns\n",
+    "from scipy import stats\n",
+    "from pathlib import Path\n",
+    "\n",
+    "sns.set_theme(style=\"whitegrid\", palette=\"muted\")\n",
+    "plt.rcParams.update({'figure.titlesize': 16, 'axes.labelsize': 12,\n",
+    "                     'axes.titlesize': 14})\n",
+    "\n",
+    "Path(\"results\").mkdir(exist_ok=True)\n",
+    "\n",
+    "totals_df  = pd.read_csv(\"data/02-processed/processed_totals_2010_2024_clean.csv\")\n",
+    "\n",
+    "# Normalize dates\n",
+    "betting_df['date'] = pd.to_datetime(betting_df['date'])\n",
+    "totals_df['GAME_DATE']  = pd.to_datetime(totals_df['GAME_DATE'])\n",
+    "\n",
+    "# Team-abbreviation map\n",
+    "team_map = {\n",
+    "    'atl': 'ATL', 'bos': 'BOS', 'bkn': 'BKN', 'brk': 'BKN', 'njn': 'BKN',\n",
+    "    'cha': 'CHA', 'cho': 'CHA', 'chi': 'CHI', 'cle': 'CLE', 'dal': 'DAL',\n",
+    "    'den': 'DEN', 'det': 'DET', 'gs':  'GSW', 'gsw': 'GSW', 'hou': 'HOU',\n",
+    "    'ind': 'IND', 'lac': 'LAC', 'lal': 'LAL', 'mem': 'MEM', 'mia': 'MIA',\n",
+    "    'mil': 'MIL', 'min': 'MIN', 'no':  'NOP', 'nop': 'NOP', 'noh': 'NOP',\n",
+    "    'nyk': 'NYK', 'okc': 'OKC', 'orl': 'ORL', 'phi': 'PHI', 'phx': 'PHX',\n",
+    "    'por': 'POR', 'sa':  'SAS', 'sas': 'SAS', 'sac': 'SAC', 'tor': 'TOR',\n",
+    "    'uta': 'UTA', 'utah': 'UTA', 'was': 'WAS', 'wsh': 'WAS',\n",
+    "}\n",
+    "\n",
+    "betting_df['home_tri'] = betting_df['home'].map(team_map)\n",
+    "betting_df['away_tri'] = betting_df['away'].map(team_map)\n",
+    "\n",
+    "betting_df['fav_tri'] = np.where(\n",
+    "    betting_df['whos_favored'] == 'home',\n",
+    "    betting_df['home_tri'],\n",
+    "    betting_df['away_tri']\n",
+    ")\n",
+    "betting_df['dog_tri'] = np.where(\n",
+    "    betting_df['whos_favored'] == 'home',\n",
+    "    betting_df['away_tri'],\n",
+    "    betting_df['home_tri']\n",
+    ")\n",
+    "\n",
+    "# Merge favorite team stats\n",
+    "fav_stats = totals_df.rename(columns={'GAME_DATE': 'date',\n",
+    "                                       'TEAM_ABBREVIATION': 'fav_tri'})\n",
+    "fav_cols = ['FG_PCT', 'FG3_PCT', 'FT_PCT', 'REB', 'TOV', 'STL', 'BLK',\n",
+    "            'AST', 'PLUS_MINUS', 'PTS']\n",
+    "fav_stats = fav_stats[['date', 'fav_tri'] + fav_cols]\n",
+    "fav_stats.columns = ['date', 'fav_tri'] + ['fav_' + c for c in fav_cols]\n",
+    "\n",
+    "merged = betting_df.merge(fav_stats, on=['date', 'fav_tri'], how='inner')\n",
+    "\n",
+    "# Merge underdog team stats\n",
+    "dog_stats = totals_df.rename(columns={'GAME_DATE': 'date',\n",
+    "                                       'TEAM_ABBREVIATION': 'dog_tri'})\n",
+    "dog_stats = dog_stats[['date', 'dog_tri'] + fav_cols]\n",
+    "dog_stats.columns = ['date', 'dog_tri'] + ['dog_' + c for c in fav_cols]\n",
+    "\n",
+    "merged = merged.merge(dog_stats, on=['date', 'dog_tri'], how='inner')\n",
+    "\n",
+    "# Create differential features\n",
+    "for stat in ['FG_PCT', 'FG3_PCT', 'REB', 'TOV', 'AST', 'PLUS_MINUS']:\n",
+    "    merged[f'diff_{stat}'] = merged[f'fav_{stat}'] - merged[f'dog_{stat}']\n",
+    "\n",
+    "# Rebuild quarter-level features on the merged set\n",
+    "def fav_q_diff(row, q):\n",
+    "    if row['whos_favored'] == 'home':\n",
+    "        return row[f'q{q}_home'] - row[f'q{q}_away']\n",
+    "    elif row['whos_favored'] == 'away':\n",
+    "        return row[f'q{q}_away'] - row[f'q{q}_home']\n",
+    "    return np.nan\n",
+    "\n",
+    "for q in [1, 2, 3, 4]:\n",
+    "    merged[f'fav_q{q}_diff'] = merged.apply(lambda r: fav_q_diff(r, q), axis=1)\n",
+    "\n",
+    "merged['fav_first_half_margin']  = merged['fav_q1_diff'] + merged['fav_q2_diff']\n",
+    "merged['fav_second_half_margin'] = merged['fav_q3_diff'] + merged['fav_q4_diff']\n",
+    "merged['fav_q3_swing']           = merged['fav_q3_diff'] - merged['fav_q2_diff']\n",
+    "\n",
+    "print(f\"Merged dataset shape: {merged.shape}\")\n",
+    "print(f\"\\nCover distribution:\\n{merged['favorite_cover'].value_counts()}\")\n",
+    "merged.to_csv(\"data/02-processed/merged_betting_totals.csv\", index=False)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Visualizing box-score features by spread-coverage outcome\n",
+    "\n",
+    "key_features = ['fav_FG_PCT', 'fav_REB', 'fav_TOV', 'fav_PLUS_MINUS',\n",
+    "                'diff_FG_PCT', 'diff_REB']\n",
+    "\n",
+    "fig, axes = plt.subplots(2, 3, figsize=(18, 10))\n",
+    "axes = axes.flatten()\n",
+    "\n",
+    "for i, feat in enumerate(key_features):\n",
+    "    sns.boxplot(data=merged, x='favorite_cover', y=feat, ax=axes[i],\n",
+    "                palette={0: '#e74c3c', 1: '#2ecc71'})\n",
+    "    axes[i].set_title(f\"{feat} by Spread Coverage\")\n",
+    "    axes[i].set_xlabel(\"Covered? (0=No, 1=Yes)\")\n",
+    "\n",
+    "plt.suptitle(\"Team Box-Score Features by Spread Coverage Outcome\",\n",
+    "             fontsize=16, y=1.02)\n",
+    "plt.tight_layout()\n",
+    "plt.savefig(\"results/eda_boxscore_boxplots.png\", dpi=150, bbox_inches='tight')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Correlation heatmap of differential features with target\n",
+    "\n",
+    "corr_cols = ['diff_FG_PCT', 'diff_FG3_PCT', 'diff_REB', 'diff_TOV',\n",
+    "             'diff_AST', 'diff_PLUS_MINUS', 'fav_first_half_margin',\n",
+    "             'favorite_cover']\n",
+    "corr_matrix = merged[corr_cols].corr()\n",
+    "\n",
+    "fig, ax = plt.subplots(figsize=(9, 7))\n",
+    "sns.heatmap(corr_matrix, annot=True, fmt=\".3f\", cmap=\"coolwarm\",\n",
+    "            center=0, ax=ax, square=True)\n",
+    "ax.set_title(\"Correlation Matrix: Differential Features & Scoring Patterns vs. Spread Coverage\")\n",
+    "plt.tight_layout()\n",
+    "plt.savefig(\"results/eda_correlation_heatmap.png\", dpi=150, bbox_inches='tight')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Interpretation:\n",
+    "\n",
+    "The correlation heatmap reveals that `diff_PLUS_MINUS` (the favorite's plus-minus advantage over the underdog) has the strongest linear association with spread coverage, followed by `diff_FG_PCT`. Rebound and turnover differentials show weaker but non-trivial correlations. The first-half margin from our quarter-by-quarter features also correlates with the target, though not as strongly as the box-score differentials. This aligns with prior work identifying shooting efficiency as the most important predictor of NBA outcomes (He & Choi, 2025)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Statistical Analysis of Feature–Outcome Relationships\n",
+    "\n",
+    "To move beyond visual inspection, we perform formal statistical tests comparing feature distributions between games where the favorite covered and games where they did not. We use independent-samples Welch's t-tests for continuous features and report Cohen's d for effect size."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Welch's t-tests and effect sizes\n",
+    "\n",
+    "from scipy.stats import ttest_ind, pointbiserialr\n",
+    "\n",
+    "cover   = merged[merged['favorite_cover'] == 1]\n",
+    "nocover = merged[merged['favorite_cover'] == 0]\n",
+    "\n",
+    "test_features = [\n",
+    "    'fav_FG_PCT', 'fav_FG3_PCT', 'fav_REB', 'fav_TOV', 'fav_PLUS_MINUS',\n",
+    "    'diff_FG_PCT', 'diff_REB', 'diff_TOV', 'diff_PLUS_MINUS',\n",
+    "    'fav_first_half_margin', 'fav_second_half_margin', 'fav_q3_swing'\n",
+    "]\n",
+    "\n",
+    "results = []\n",
+    "for feat in test_features:\n",
+    "    c_vals  = cover[feat].dropna()\n",
+    "    nc_vals = nocover[feat].dropna()\n",
+    "    t_stat, p_val = ttest_ind(c_vals, nc_vals, equal_var=False)\n",
+    "    # Cohen's d\n",
+    "    pooled_std = np.sqrt((c_vals.std()**2 + nc_vals.std()**2) / 2)\n",
+    "    d = (c_vals.mean() - nc_vals.mean()) / pooled_std if pooled_std > 0 else 0\n",
+    "    # Point-biserial correlation\n",
+    "    combined = merged[[feat, 'favorite_cover']].dropna()\n",
+    "    r_pb, p_pb = pointbiserialr(combined['favorite_cover'], combined[feat])\n",
+    "    results.append({\n",
+    "        'Feature': feat,\n",
+    "        'Mean (Cover)': round(c_vals.mean(), 4),\n",
+    "        'Mean (No Cover)': round(nc_vals.mean(), 4),\n",
+    "        't-statistic': round(t_stat, 3),\n",
+    "        'p-value': f\"{p_val:.2e}\",\n",
+    "        \"Cohen's d\": round(d, 3),\n",
+    "        'r_pb': round(r_pb, 4),\n",
+    "    })\n",
+    "\n",
+    "stat_df = pd.DataFrame(results)\n",
+    "print(\"Statistical Tests: Cover vs. No-Cover Groups\")\n",
+    "print(\"=\" * 90)\n",
+    "display(stat_df)\n",
+    "stat_df.to_csv(\"results/statistical_tests.csv\", index=False)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Interpretation of Statistical Tests:**\n",
+    "\n",
+    "Need to do"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**NOTE** The final report should not be overly long.  If this EDA step is huge and complicated  and you went down a lot of dead ends, then you should do something about that.  Some options... \n",
+    "\n",
+    "1) remove any EDA you later decided was unecessary side quest.\n",
+    "2) if the code to EDA is very long (in either lines or in time to compute) make sure you write out images of the EDA into `results/` and reload them as images here instead of recalculating it. And make a statement here like \"To see the code responsible for EDA analyses see `02-EDACheckpoint.ipynb`.\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Does a Fast Start Mean For a Strong Finish?\n",
+    "\n",
+    "We seek to determine if the favorite's point differential (fav_first_half_margin)at halftime is a statistically significant predictor of favorite_cover. While we see a visual shift in the KDE plots during EDA, we then have to quantify the difference in means between 'Cover' and 'No Cover' groups is statistically significant.\n",
+    "\n",
+    "**The Means:**  We are going to deploy an Independant Samples T-test. We will also check the P-value against a significance level of a = 0.05"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "group_cover = betting_df[betting_df['favorite_cover'] == 1]['fav_first_half_margin'].dropna()\n",
+    "group_no_cover = betting_df[betting_df['favorite_cover'] == 0]['fav_first_half_margin'].dropna()\n",
+    "print(f\"Mean Halftime Margin (Cover): {group_cover.mean():.3f}\")\n",
+    "print(f\"Mean Halftime Margin (No Cover): {group_no_cover.mean():.3f}\")\n",
+    "t_stat, p_val = stats.ttest_ind(group_cover, group_no_cover, equal_var=False)\n",
+    "print(f\"T-Statistic: {t_stat:.4f}\")\n",
+    "print(f\"P-Value: {p_val:.4e}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Predicting Outcomes with Mid-Game Performance\n",
+    "\n",
+    "For this analysis, we use Logistic Regression. We chose this specific method because our goal is to predict a binary Yes/No outcome. Unlike standard regression, which predicts a continuous number, logistic regression calculates the probability of an event occurring based on the data we feed to it, which in this case is the halftime lead and original point spread."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "X = betting_df[['fav_first_half_margin', 'spread']]\n",
+    "X = sm.add_constant(X)\n",
+    "y = betting_df['favorite_cover']\n",
+    "logit_model = sm.Logit(y, X).fit()\n",
+    "print(logit_model.summary())\n",
+    "odds_ratios = np.exp(logit_model.params)\n",
+    "print('\\nOdds Ratios:')\n",
+    "print(odds_ratios)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Summary\n",
+    "\n",
+    "In conclusion, with our T-test, we were able to confirm that favorites who cover the spread have a statistically significant lead at halftime compared to those that do not. Momentum is a measurable indicator that a team will outperform its pre-game projection. Our logistic regression model showed that every additional point in the halftime margin significantly increases the chances of covering. Real-time data is a purer signal to buy than any pre-game betting sentiment. First-half scoring margins overall offer a high-leverage entry point for predicting final outcomes. This is why we chose to use intragame statistics."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Ethics"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "\n",
+    "### A. Data Collection\n",
+    " - [X] **X A.1 Informed consent**: If there are human subjects, have they given informed consent, where subjects affirmatively opt-in and have a clear understanding of the data uses to which they consent?\n",
+    "\n",
+    "> Not applicable. There are no individual human subjects involved in our data, it is simply public data that contains information regarding the outcome of NBA games.\n",
+    "\n",
+    " - [X] **X A.2 Collection bias**: Have we considered sources of bias that could be introduced during data collection and survey design and taken steps to mitigate those?\n",
+    "\n",
+    " > Not applicable. Again, our dataset consists of publicly available game statistics and betting odds so there can't be any individual bias that skews the data.\n",
+    "\n",
+    " - [X] **X A.3 Limit PII exposure**: Have we considered ways to minimize exposure of personally identifiable information (PII) for example through anonymization or not collecting information that isn't relevant for analysis?\n",
+    "\n",
+    " > The data consists of limited personal information. All the data is in reference to entire team performance. Individual player statistics or characteristics are not used in the dataset, only their names, and in this instance, they are already public figures/celebrities.\n",
+    "\n",
+    " - [X] **X A.4 Downstream bias mitigation**: Have we considered ways to enable testing downstream results for biased outcomes (e.g., collecting data on protected group status like race or gender)?\n",
+    "\n",
+    " > While the team-level data doesn't have any biases pertaining to race or gender, there can be other factors that contribute to skewed data. The models might perform differently for West Coast vs East Coast teams due to extra travel or time zone effects. There could also be bias involving small-market teams as these teams might not receive enough attention to warrant a betting line that is as accurate as it would be for a larger team.\n",
+    "\n",
+    "### B. Data Storage\n",
+    " - [X] **X B.1 Data security**: Do we have a plan to protect and secure data (e.g., encryption at rest and in transit, access controls on internal users and third parties, access logs, and up-to-date software)?\n",
+    "\n",
+    "> Data will be stored in our private GitHub repositories. Moreover, this data is all publicly available information that is free for use, there is nothing we need to explicitly protect.\n",
+    "\n",
+    " - [X] **X B.2 Right to be forgotten**: Do we have a mechanism through which an individual can request their personal information be removed?\n",
+    "\n",
+    "> Not applicable as there is no personal information involved in this dataset.\n",
+    "\n",
+    " - [X] **X B.3 Data retention plan**: Is there a schedule or plan to delete the data after it is no longer needed?\n",
+    "\n",
+    "> The data will be deleted following the completion of the COGS 108 course. This is simply because this is public data and there is no reason for us to store personal copies after the completion of this project.\n",
+    "\n",
+    "### C. Analysis\n",
+    " - [X] **X C.1 Missing perspectives**: Have we sought to address blindspots in the analysis through engagement with relevant stakeholders (e.g., checking assumptions and discussing implications with affected communities and subject matter experts)?\n",
+    "\n",
+    " > As we are just students and not professional sports analysts, we will be addressing blindspots in the analysis by reviewing literature written by these professional analysts. \n",
+    "\n",
+    " - [X] **X C.2 Dataset bias**: Have we examined the data for possible sources of bias and taken steps to mitigate or address these biases (e.g., stereotype perpetuation, confirmation bias, imbalanced classes, or omitted confounding variables)?\n",
+    "\n",
+    "> We will create a plan for the creation of our models before ever starting on them so that we can avoid enforcing our personal biases on the model creation process.\n",
+    "\n",
+    " - [X] **X C.3 Honest representation**: Are our visualizations, summary statistics, and reports designed to honestly represent the underlying data?\n",
+    "\n",
+    "> Yes. Our visualizations will use appropriate scaling and labeling in order to show the data as accurately as possible.\n",
+    "\n",
+    " - [X] **X C.4 Privacy in analysis**: Have we ensured that data with PII are not used or displayed unless necessary for the analysis?\n",
+    "\n",
+    "> There is no data with PII.\n",
+    "\n",
+    " - [X] **X C.5 Auditability**: Is the process of generating the analysis well documented and reproducible if we discover issues in the future?\n",
+    "\n",
+    "> We will ensure that we document the process extensively before starting the project.\n",
+    "\n",
+    "### D. Modeling\n",
+    " - [X] **X D.1 Proxy discrimination**: Have we ensured that the model does not rely on variables or proxies for variables that are unfairly discriminatory?\n",
+    "\n",
+    "> The data is based on real-world outcomes of NBA games. There are no inherently unfair or discriminatory stats as they are simply reflections of what happened at these games. \n",
+    "\n",
+    " - [X] **X D.2 Fairness across groups**: Have we tested model results for fairness with respect to different affected groups (e.g., tested for disparate error rates)?\n",
+    "\n",
+    "> The data is based on real-world outcomes of NBA games. There are no inherently unfair or discriminatory stats as they are simply reflections of what happened at these games. \n",
+    "\n",
+    " - [X] **X D.3 Metric selection**: Have we considered the effects of optimizing for our defined metrics and considered additional metrics?\n",
+    "\n",
+    "> We are considering finding more datasets to supplement our data regarding quarter-by-quarter scoring statistics.\n",
+    "\n",
+    " - [X] **X D.4 Explainability**: Can we explain in understandable terms a decision the model made in cases where a justification is needed?\n",
+    "\n",
+    "> Yes, we will work to make our models as interpretable as possible.\n",
+    "\n",
+    " - [X] **X D.5 Communicate limitations**: Have we communicated the shortcomings, limitations, and biases of the model to relevant stakeholders in ways that can be generally understood?\n",
+    "\n",
+    "> Yes, we will work to make our models as interpretable as possible so we can accurately identify shortcomings and limitations.\n",
+    "\n",
+    "\n",
+    "### E. Deployment\n",
+    " - [X] **X E.1 Monitoring and evaluation**: Do we have a clear plan to monitor the model and its impacts after it is deployed (e.g., performance monitoring, regular audit of sample predictions, human review of high-stakes decisions, reviewing downstream impacts of errors or low-confidence decisions, testing for concept drift)?\n",
+    "\n",
+    "> This is an academic project that won't be deployed.\n",
+    "\n",
+    " - [X] **X E.2 Redress**: Have we discussed with our organization a plan for response if users are harmed by the results (e.g., how does the data science team evaluate these cases and update analysis and models to prevent future harm)?\n",
+    "\n",
+    "> This is an academic project that won't reach the hands of consumers who could get hurt.\n",
+    "\n",
+    " - [X] **X E.3 Roll back**: Is there a way to turn off or roll back the model in production if necessary?\n",
+    "\n",
+    "> This won't enter production.\n",
+    "\n",
+    " - [X] **X E.4 Unintended use**: Have we taken steps to identify and prevent unintended uses and abuse of the model and do we have a plan to monitor these once the model is deployed?\n",
+    "\n",
+    "> The model won't be used by anyone other than us.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Discussion and Conclusion\n",
+    "\n",
+    "Wrap it all up here.  Somewhere between 3 and 10 paragraphs roughly. \n",
+    "1. Summarize the important results you made\n",
+    "2. This is a good time to refer back to your Background section and review how this work extended the previous stuff.\n",
+    "3. Try to bring all the different results together into a bigger picture... what have we learned?\n",
+    "4. Often what we learned is confusing.  Discuss if there are contradictory results how that might have happened\n",
+    "5. Discuss the limitations of your work. e.g, is the dataset a biased sample? would more data make you more confident? would longitudinal instead of cross-sectional data helpful? is there evidence that the phenomena you're investigating may change over time? etc\n",
+    "6. If you would like, you can also say what the next steps in this investigation might be if the work was to continue outside this class\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
